@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:elevation="7dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/manhattan"
+    tools:context=".UI.AddTermFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="sans-serif-black"
+            android:text="TYPE:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textview_addcourse_ENDDATE" />
+
+        <Button
+            android:id="@+id/button_addterm_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="44dp"
+            android:text="Cancel"
+
+            app:layout_constraintEnd_toStartOf="@+id/button_addassessment_addassessment"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radiogroup_addterm_isactive" />
+
+        <TextView
+            android:id="@+id/textview_addassessment_ADDASSESSMENT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="sans-serif-black"
+            android:text="ADD A TERM."
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/candyAppleRed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_addassessment_addassessment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:onClick="addTerm"
+            android:text="Add Term"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_addterm_cancel"
+            app:layout_constraintTop_toBottomOf="@+id/radiogroup_addterm_isactive" />
+
+        <RadioGroup
+            android:id="@+id/radiogroup_addterm_isactive"
+            android:layout_width="0dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="8dp"
+            android:checkedButton="@id/radiobutton_term_notactive"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/textview_addcourse_enddatepicker"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/textview_addcourse_ENDDATE"
+            tools:ignore="NotSibling">
+
+            <RadioButton
+                android:id="@+id/radiobutton_addassessment_assessment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:text="active" />
+
+            <RadioButton
+                android:id="@+id/radiobutton_addassessment_performance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
+                android:text="not active" />
+
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textview_addterm_startdatepicker"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="sans-serif-black"
+            android:text="choose date"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintEnd_toEndOf="@+id/edittext_addassessment_assessmenttitle"
+            app:layout_constraintStart_toEndOf="@+id/textview_addassessment_date"
+            app:layout_constraintTop_toBottomOf="@+id/edittext_addassessment_assessmenttitle" />
+
+        <TextView
+            android:id="@+id/textview_addterm_enddatepicker"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="sans-serif-black"
+            android:text="choose date"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintEnd_toEndOf="@+id/textview_addterm_startdatepicker"
+            app:layout_constraintStart_toEndOf="@+id/textview_addcourse_ENDDATE"
+            app:layout_constraintTop_toBottomOf="@+id/textview_addterm_startdatepicker" />
+
+        <TextView
+            android:id="@+id/textview_addcourse_ENDDATE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="sans-serif-black"
+            android:text="END DATE:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textview_addassessment_date" />
+
+        <TextView
+            android:id="@+id/textview_addassessment_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="sans-serif-black"
+            android:text="START DATE:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edittext_addassessment_assessmenttitle" />
+
+        <EditText
+            android:id="@+id/edittext_addassessment_assessmenttitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:ems="10"
+            android:hint="term name"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textview_addassessment_ASSESSMENTTITLE" />
+
+        <TextView
+            android:id="@+id/textview_addassessment_ASSESSMENTTITLE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="76dp"
+            android:fontFamily="sans-serif-black"
+            android:text="TERM NAME:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

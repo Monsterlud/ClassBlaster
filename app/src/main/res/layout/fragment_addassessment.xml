@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:elevation="7dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/manhattan"
+    tools:context=".UI.AddTermFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="4dp">
+
+        <TextView
+            android:id="@+id/textview_addassessment_TYPE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="54dp"
+            android:fontFamily="sans-serif-black"
+            android:text="TYPE:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textview_addassessment_date" />
+
+        <Button
+            android:id="@+id/button_addassessment_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="60dp"
+            android:text="Cancel"
+            app:layout_constraintEnd_toStartOf="@+id/button_addassessment_addassessment"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textview_addassessment_TYPE"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textview_addassessment_ADDASSESSMENT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="sans-serif-black"
+            android:text="ADD AN ASSESSMENT."
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/candyAppleRed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_addassessment_addassessment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="60dp"
+            android:text="Add Assessment"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_addassessment_cancel"
+            app:layout_constraintTop_toBottomOf="@+id/textview_addassessment_TYPE"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textview_addassessment_startdatepicker"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="sans-serif-black"
+            android:text="choose date"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintEnd_toEndOf="@+id/edittext_addassessment_assessmenttitle"
+            app:layout_constraintStart_toEndOf="@+id/textview_addassessment_date"
+            app:layout_constraintTop_toBottomOf="@+id/edittext_addassessment_assessmenttitle" />
+
+        <TextView
+            android:id="@+id/textview_addassessment_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="sans-serif-black"
+            android:text="DATE:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edittext_addassessment_assessmenttitle" />
+
+        <EditText
+            android:id="@+id/edittext_addassessment_assessmenttitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:ems="10"
+            android:hint="assessment title"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textview_addassessment_ASSESSMENTTITLE" />
+
+        <TextView
+            android:id="@+id/textview_addassessment_ASSESSMENTTITLE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="76dp"
+            android:fontFamily="sans-serif-black"
+            android:text="ASSESSMENT TITLE:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/radiogroup_addassessment_assessmenttype"
+            android:layout_width="0dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="48dp"
+            android:checkedButton="@id/radiobutton_term_notactive"
+
+            android:orientation="horizontal"
+            app:layout_constraintStart_toEndOf="@+id/textview_addassessment_TYPE"
+            app:layout_constraintTop_toBottomOf="@+id/textview_addassessment_date"
+            tools:ignore="NotSibling">
+
+            <RadioButton
+                android:id="@+id/radiobutton_addassessment_assessment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:text="objective" />
+
+            <RadioButton
+                android:id="@+id/radiobutton_addassessment_performance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
+                android:text="performance" />
+
+
+        </RadioGroup>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

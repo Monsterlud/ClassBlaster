@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:elevation="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/manhattan"
+    tools:context=".UI.AddTermFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/et_addcourse_phone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:inputType="phone"
+            app:layout_constraintEnd_toEndOf="@+id/et_addcourse_email"
+            app:layout_constraintStart_toEndOf="@+id/textview_addcourse_PHONE"
+            app:layout_constraintTop_toBottomOf="@+id/et_addcourse_email" />
+
+        <EditText
+            android:id="@+id/et_addcourse_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            app:layout_constraintEnd_toEndOf="@+id/et_addcourse_instructorname"
+            app:layout_constraintStart_toEndOf="@+id/textview_addcourse_EMAIL"
+            app:layout_constraintTop_toBottomOf="@+id/et_addcourse_instructorname" />
+
+        <TextView
+            android:id="@+id/textview_addcourse_PHONE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="42dp"
+            android:fontFamily="sans-serif-black"
+            android:text="INSTRUCTOR PHONE"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textview_addcourse_EMAIL" />
+
+        <TextView
+            android:id="@+id/textview_addcourse_EMAIL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="sans-serif-black"
+            android:text="INSTRUCTOR EMAIL"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textview_addcourse_INSTRUCTORNAME" />
+
+        <EditText
+            android:id="@+id/et_addcourse_instructorname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="instructor name"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="@+id/spinner_addcourse_coursestatus"
+            app:layout_constraintStart_toEndOf="@+id/textview_addcourse_INSTRUCTORNAME"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_addcourse_coursestatus" />
+
+        <TextView
+            android:id="@+id/textview_addcourse_INSTRUCTORNAME"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="sans-serif-black"
+            android:text="INSTRUCTOR NAME"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textview_addcourse_STATUS" />
+
+        <TextView
+            android:id="@+id/textview_addcourse_STATUS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="18dp"
+            android:fontFamily="sans-serif-black"
+            android:text="STATUS:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textview_addcourse_enddatepicker" />
+
+        <Spinner
+            android:id="@+id/spinner_addcourse_coursestatus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="18dp"
+            android:entries="@array/spinnerItems"
+            app:layout_constraintEnd_toEndOf="@+id/textview_addcourse_enddatepicker"
+            app:layout_constraintStart_toEndOf="@+id/textview_addcourse_STATUS"
+            app:layout_constraintTop_toBottomOf="@+id/textview_addcourse_enddatepicker" />
+
+        <Button
+            android:id="@+id/button_addassessment_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="32dp"
+            android:text="Cancel"
+            app:layout_constraintEnd_toStartOf="@+id/button_addassessment_addassessment"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textview_addcourse_PHONE"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textview_addassessment_ADDASSESSMENT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif-black"
+            android:text="ADD A COURSE."
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/candyAppleRed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_addassessment_addassessment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Add Course"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_addassessment_cancel"
+            app:layout_constraintTop_toBottomOf="@+id/textview_addcourse_PHONE"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textview_addassessment_startdatepicker"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-black"
+            android:text="choose date"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintEnd_toEndOf="@+id/edittext_addassessment_assessmenttitle"
+            app:layout_constraintStart_toEndOf="@+id/textview_addassessment_date"
+            app:layout_constraintTop_toBottomOf="@+id/edittext_addassessment_assessmenttitle" />
+
+        <TextView
+            android:id="@+id/textview_addcourse_enddatepicker"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="sans-serif-black"
+            android:text="choose date"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintEnd_toEndOf="@+id/textview_addassessment_startdatepicker"
+            app:layout_constraintStart_toEndOf="@+id/textview_addcourse_ENDDATE"
+            app:layout_constraintTop_toBottomOf="@+id/textview_addassessment_startdatepicker" />
+
+        <TextView
+            android:id="@+id/textview_addcourse_ENDDATE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="sans-serif-black"
+            android:text="END DATE:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textview_addassessment_date" />
+
+        <TextView
+            android:id="@+id/textview_addassessment_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-black"
+            android:text="START DATE:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edittext_addassessment_assessmenttitle" />
+
+        <EditText
+            android:id="@+id/edittext_addassessment_assessmenttitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:ems="10"
+            android:hint="course name"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textview_addassessment_ASSESSMENTTITLE"
+            app:layout_constraintTop_toBottomOf="@+id/textview_addassessment_ADDASSESSMENT" />
+
+        <TextView
+            android:id="@+id/textview_addassessment_ASSESSMENTTITLE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-black"
+            android:text="COURSE NAME:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textview_addassessment_ADDASSESSMENT" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.monsalud.classblaster.UI.NoteActivity">
+    <item
+        android:id="@+id/action_notification_startdate"
+        android:orderInCategory="100"
+        android:title="set alert for start date"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_notification_enddate"
+        android:title="set alert for end date"
+        android:orderInCategory="200"
+        app:showAsAction="never" />
+
+
+</menu>

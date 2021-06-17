@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/snow"
+    tools:context=".UI.MainActivity">
+
+    <ImageView
+        android:id="@+id/icon_ClassBlaster"
+        android:layout_width="135dp"
+        android:layout_height="118dp"
+        android:layout_marginBottom="200dp"
+        app:layout_constraintBottom_toTopOf="@+id/button_Enter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_ClassBlaster"
+        app:srcCompat="@drawable/ic_baseline_event_note_24" />
+
+    <TextView
+        android:id="@+id/text_ClassBlaster"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="400dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/classblaster"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/fireBrick"
+        android:textSize="44sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_Enter"
+        app:layout_constraintEnd_toEndOf="@+id/button_Enter"
+        app:layout_constraintStart_toStartOf="@+id/button_Enter" />
+
+    <Button
+        android:id="@+id/button_Enter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/enter"
+        android:onClick="goToTermList"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/motto"
+        android:textColor="@color/buttercup"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/icon_ClassBlaster"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_ClassBlaster" />
+</androidx.constraintlayout.widget.ConstraintLayout>

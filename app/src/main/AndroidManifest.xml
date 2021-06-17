@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.monsalud.classblaster">
+
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ClassBlaster">
+        <receiver
+            android:name=".UI.CBReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".UI.NoteListActivity"
+            android:label="Notes"
+            android:parentActivityName=".UI.CourseActivity" />
+        <activity
+            android:name=".UI.NoteActivity"
+            android:label="Note"
+            android:parentActivityName=".UI.NoteListActivity" />
+        <activity
+            android:name=".UI.TermActivity"
+            android:label="Term"
+            android:parentActivityName=".UI.TermListActivity" />
+        <activity
+            android:name=".UI.AssessmentActivity"
+            android:label="Assessment"
+            android:parentActivityName=".UI.CourseActivity" />
+        <activity
+            android:name=".UI.CourseActivity"
+            android:label="Course"
+            android:parentActivityName=".UI.TermActivity" />
+        <activity
+            android:name=".UI.TermListActivity"
+            android:label="Terms"
+            android:parentActivityName=".UI.MainActivity" />
+        <activity android:name=".UI.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
