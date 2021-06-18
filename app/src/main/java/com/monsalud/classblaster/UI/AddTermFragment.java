@@ -153,11 +153,9 @@ public class AddTermFragment extends Fragment {
     public interface OnCancelAddTermListener {
         void onCancel();
     }
-
     public interface OnAddTermListener {
         void onAddTerm();
     }
-
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);

@@ -209,7 +209,6 @@ public class CourseActivity extends AppCompatActivity
             mAssessmentRecyclerAdapter.notifyDataSetChanged();
         }
 
-
     private void initializeDisplayContents() {
 
         final RecyclerView recyclerAssessments = (RecyclerView) findViewById(R.id.list_assessments);

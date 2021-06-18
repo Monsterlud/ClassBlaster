@@ -39,6 +39,7 @@ public class TermRecyclerAdapter extends RecyclerView.Adapter<TermRecyclerAdapte
         holder.mTextViewTerm.setText(term.getTerm_name());
         holder.mTextViewDates.setText(term.toStringDates());
         holder.mCurrentPosition = position;
+
     }
 
     @Override
