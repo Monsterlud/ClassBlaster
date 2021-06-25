@@ -34,6 +34,8 @@ There is a NOTES feature within each COURSE that allows an unlimited
 number of notes to be added and shared using the Android sharesheet.
 
 ### Details
+-there is no APK in this repository. 
+-logo by Douglas Monsalud
 
 
 
