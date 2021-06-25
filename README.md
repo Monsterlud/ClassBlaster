@@ -28,7 +28,7 @@ The UI allows the user to drill down into the COURSES that are in
 each TERM, the ASSESSMENTS that are part of each COURSE, and the 
 NOTES that are associated with each COURSE.
 
-![classblaster note](images/cb_note.png) ![classblaster share](images/cb_share)
+![classblaster note](images/cb_note.png) ![classblaster share](images/cb_share.png)
 
 There is a NOTES feature within each COURSE that allows an unlimited 
 number of notes to be added and shared using the Android sharesheet.
