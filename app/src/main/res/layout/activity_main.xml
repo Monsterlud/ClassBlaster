@@ -8,15 +8,14 @@
     tools:context=".UI.MainActivity">
 
     <ImageView
-        android:id="@+id/icon_ClassBlaster"
-        android:layout_width="135dp"
-        android:layout_height="118dp"
-        android:layout_marginBottom="200dp"
-        app:layout_constraintBottom_toTopOf="@+id/button_Enter"
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_ClassBlaster"
-        app:srcCompat="@drawable/ic_baseline_event_note_24" />
+        app:srcCompat="@drawable/cb_logo" />
 
     <TextView
         android:id="@+id/text_ClassBlaster"
@@ -53,7 +52,6 @@
         android:text="@string/motto"
         android:textColor="@color/buttercup"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/icon_ClassBlaster"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_ClassBlaster" />
